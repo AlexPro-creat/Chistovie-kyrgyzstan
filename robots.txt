@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chistovie-kg.onrender.com/sitemap.xml

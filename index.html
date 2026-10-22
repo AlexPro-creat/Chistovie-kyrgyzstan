@@ -164,6 +164,19 @@ header{position:sticky;top:0;z-index:50;background:rgba(7,16,18,.78);backdrop-fi
 .mosaic .tile:hover img{transform:scale(1.06)}
 .mosaic .tile:nth-child(even){transform:translateY(34px)}
 .mosaic-feel{margin:0 auto 34px 0}
+
+.h1-pre{display:block;font-size:.42em;font-weight:700;letter-spacing:.02em;color:var(--muted);margin-bottom:10px}
+.aud-wrap{position:relative}
+.aud-title{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.aud{position:relative;margin:0;border-radius:18px;overflow:hidden;aspect-ratio:3/4;border:1px solid var(--line-2);background:#e9f1f0;box-shadow:var(--shadow)}
+.aud img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.aud:hover img{transform:scale(1.07)}
+.aud::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(4,14,16,.92))}
+.aud figcaption{position:absolute;left:12px;right:12px;bottom:12px;z-index:1;line-height:1.25}
+.aud b{display:block;font-size:14.5px;color:#fff}
+.aud span{display:block;font-size:12px;color:#bcd3d1;margin-top:4px}
+@media (max-width:640px){.aud-grid{grid-template-columns:repeat(2,1fr);gap:10px}.aud{aspect-ratio:4/5}}
 .float-badge{position:absolute;left:-10px;bottom:18%;display:flex;gap:12px;align-items:center;background:rgba(15,29,32,.92);backdrop-filter:blur(10px);border:1px solid var(--line-2);padding:14px 18px;border-radius:16px;box-shadow:var(--shadow)}
 .float-badge .seal{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(240,201,122,.12);color:var(--gold)}
 .float-badge b{display:block;font-size:15px}
@@ -352,28 +365,27 @@ footer{padding:40px 0 110px;color:var(--muted);font-size:14.5px}
     <div class="wrap hero-grid">
       <div>
         <span class="eyebrow">Официальный дистрибьютор в Кыргызстане</span>
-        <h1>Чистовье в Кыргызстане — <span class="grad">безупречная чистота</span>, которую чувствует каждый клиент</h1>
-        <p class="lead">Сертифицированные одноразовые простыни, полотенца, салфетки, бахилы и расходники для салонов красоты, клиник и SPA. Оригинальная продукция напрямую от эксклюзивного дистрибьютора — в Бишкеке и по всему Кыргызстану.</p>
+        <h1><span class="h1-pre">Чистовье Кыргызстан</span>Приглашаем <span class="grad">к сотрудничеству</span></h1>
+        <p class="lead">Салоны красоты, клиники, SPA, сауны, гостиницы и частные мастера — поставляем сертифицированную одноразовую продукцию Чистовье напрямую от эксклюзивного дистрибьютора. Персональные условия и скидки для партнёров.</p>
         <div class="hero-cta">
-          <a class="btn btn-wa" href="https://wa.me/996557021719?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D0%B8%20%D0%A7%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%8C%D0%B5." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Заказать в WhatsApp</a>
+          <a class="btn btn-wa" href="https://wa.me/996557021719?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D0%B8%20%D0%A7%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%8C%D0%B5." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Стать партнёром</a>
           <a class="btn btn-ghost" href="#catalog">Смотреть каталог</a>
         </div>
         <ul class="hero-points">
           <li><svg><use href="#i-check"/></svg>Сертификаты качества</li>
-          <li><svg><use href="#i-check"/></svg>Скидки постоянным</li>
+          <li><svg><use href="#i-check"/></svg>Скидки партнёрам</li>
           <li><svg><use href="#i-check"/></svg>Только оригинал</li>
         </ul>
       </div>
-      <div class="collage">
-        <div class="mosaic">
-          <div class="tile"><img src="prostyni-kushetka.webp" alt="Одноразовые простыни Чистовье на кушетке" fetchpriority="high" onerror="this.onerror=null;this.src='placeholder.svg'"></div>
-          <div class="tile"><img src="polotenca.webp" alt="Полотенца Чистовье из спанлейса" onerror="this.onerror=null;this.src='placeholder.svg'"></div>
-          <div class="tile"><img src="salfetki.webp" alt="Салфетки для массажного стола Чистовье" onerror="this.onerror=null;this.src='placeholder.svg'"></div>
-          <div class="tile"><img src="bahily.webp" alt="Бахилы медицинские Чистовье" onerror="this.onerror=null;this.src='placeholder.svg'"></div>
-        </div>
-        <div class="float-badge">
-          <div class="seal"><svg width="24" height="24"><use href="#i-shield"/></svg></div>
-          <div><b>Эксклюзивный дистрибьютор</b><span>Чистовье в Кыргызстане</span></div>
+      <div class="aud-wrap" id="for-whom">
+        <div class="aud-title">Для кого</div>
+        <div class="aud-grid">
+          <figure class="aud big"><img src="pelerina.webp" alt="Чистовье для: Салоны красоты и косметология" fetchpriority="high" onerror="this.onerror=null;this.src='placeholder.svg'"><figcaption><b>Салоны красоты и косметология</b><span>Пелерины, простыни, полотенца</span></figcaption></figure>
+          <figure class="aud"><img src="perchatki.webp" alt="Чистовье для: Маникюр и педикюр" fetchpriority="high" onerror="this.onerror=null;this.src='placeholder.svg'"><figcaption><b>Маникюр и педикюр</b><span>Перчатки, салфетки, тапочки</span></figcaption></figure>
+          <figure class="aud"><img src="prostyni-kushetka.webp" alt="Чистовье для: Массаж и SPA" loading="lazy" onerror="this.onerror=null;this.src='placeholder.svg'"><figcaption><b>Массаж и SPA</b><span>Простыни, салфетки с отверстием</span></figcaption></figure>
+          <figure class="aud"><img src="shapochka.webp" alt="Чистовье для: Бани и сауны" loading="lazy" onerror="this.onerror=null;this.src='placeholder.svg'"><figcaption><b>Бани и сауны</b><span>Шапочки, тапочки, халаты</span></figcaption></figure>
+          <figure class="aud"><img src="bahily-model.webp" alt="Чистовье для: Клиники и стоматологии" loading="lazy" onerror="this.onerror=null;this.src='placeholder.svg'"><figcaption><b>Клиники и стоматологии</b><span>Бахилы, простыни, перчатки</span></figcaption></figure>
+          <figure class="aud"><img src="halat.webp" alt="Чистовье для: Гостиницы и отели" loading="lazy" onerror="this.onerror=null;this.src='placeholder.svg'"><figcaption><b>Гостиницы и отели</b><span>Халаты, тапочки, полотенца</span></figcaption></figure>
         </div>
       </div>
     </div>
@@ -500,25 +512,6 @@ footer{padding:40px 0 110px;color:var(--muted);font-size:14.5px}
     </div>
   </section>
 
-  <section id="for-whom">
-    <div class="wrap reveal">
-      <span class="eyebrow">Для кого</span>
-      <h2>Кому подходит продукция Чистовье</h2>
-      <p class="lead">Одноразовые изделия для всех, кто работает с клиентами и заботится о гигиене.</p>
-      <div class="chips">
-        <span class="chip"><i>💆‍♀️</i>Салоны красоты</span>
-        <span class="chip"><i>✨</i>Косметология</span>
-        <span class="chip"><i>💅</i>Маникюр и педикюр</span>
-        <span class="chip"><i>✂️</i>Парикмахерские и барбершопы</span>
-        <span class="chip"><i>🧖</i>SPA и массаж</span>
-        <span class="chip"><i>🏥</i>Медицинские центры</span>
-        <span class="chip"><i>🦷</i>Стоматологии</span>
-        <span class="chip"><i>🏨</i>Гостиницы и сауны</span>
-        <span class="chip"><i>🖋️</i>Тату-студии</span>
-        <span class="chip"><i>🏠</i>Частные мастера</span>
-      </div>
-    </div>
-  </section>
 
   <section id="why" style="padding-top:0">
     <div class="wrap">

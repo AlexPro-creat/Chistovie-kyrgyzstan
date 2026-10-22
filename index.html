@@ -56,7 +56,7 @@
   ]
  },
  "sameAs": [
-  "https://www.instagram.com/INSTAGRAM_NICK/"
+  "https://www.instagram.com/cosmedica.kg/"
  ]
 }
 </script>
@@ -252,6 +252,19 @@ details p{padding:0 24px 22px;color:var(--muted)}
 .contact .phone-big{display:inline-block;font-size:clamp(30px,5.4vw,52px);font-weight:800;text-decoration:none;margin-bottom:30px}
 .contact .btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 
+
+/* QR-коды — только на компьютере */
+.qr-row{display:flex;justify-content:center;gap:22px;margin-top:34px}
+.qr{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:12px 18px 12px 12px;text-align:left}
+.qr img{width:104px;height:104px;border-radius:8px;flex:none}
+.qr b{display:block;font-size:15px}
+.qr span{display:block;font-size:13px;color:#c4dad8;max-width:150px;line-height:1.4}
+.ig-actions{display:flex;align-items:center;gap:22px}
+.ig-qr{display:flex;align-items:center;gap:12px}
+.ig-qr img{width:88px;height:88px;border-radius:8px}
+.ig-qr span{font-size:12.5px;color:var(--muted);max-width:92px;line-height:1.35}
+@media (max-width:1024px),(hover:none){.qr-row,.ig-qr{display:none}}
+
 footer{padding:40px 0 110px;color:var(--muted);font-size:14.5px}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:28px}
 .foot a{text-decoration:none;font-weight:700;color:var(--ink)}
@@ -271,7 +284,7 @@ footer{padding:40px 0 110px;color:var(--muted);font-size:14.5px}
   .strip-grid{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:1fr}
   .ig-box{grid-template-columns:auto 1fr}
-  .ig-box .btn{grid-column:1/-1;justify-content:center}
+  .ig-actions{grid-column:1/-1}.ig-box .btn{flex:1;justify-content:center}
 }
 @media (max-width:640px){
   body{font-size:16px}
@@ -538,7 +551,10 @@ footer{padding:40px 0 110px;color:var(--muted);font-size:14.5px}
           <h2>Мы в Instagram</h2>
           <p>Новинки, акции, обзоры продукции и советы для мастеров — подписывайтесь на нашу страницу.</p>
         </div>
-        <a class="btn btn-ig" href="https://www.instagram.com/INSTAGRAM_NICK/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Открыть Instagram</a>
+        <div class="ig-actions">
+          <div class="ig-qr"><img src="img/qr-instagram.svg" alt="QR-код Instagram cosmedica.kg" width="88" height="88"><span>Наведите камеру телефона</span></div>
+          <a class="btn btn-ig" href="https://www.instagram.com/cosmedica.kg/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@cosmedica.kg</a>
+        </div>
       </div>
     </div>
   </section>
@@ -566,7 +582,11 @@ footer{padding:40px 0 110px;color:var(--muted);font-size:14.5px}
         <div class="btns">
           <a class="btn btn-wa" href="https://wa.me/996557201719?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D0%B8%20%D0%A7%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%8C%D0%B5." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Написать в WhatsApp</a>
           <a class="btn btn-ghost" href="tel:+996557201719"><svg><use href="#i-phone"/></svg>Позвонить</a>
-          <a class="btn btn-ghost" href="https://www.instagram.com/INSTAGRAM_NICK/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Instagram</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/cosmedica.kg/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Instagram</a>
+        </div>
+        <div class="qr-row">
+          <div class="qr"><img src="img/qr-whatsapp.svg" alt="QR-код для заказа в WhatsApp" width="104" height="104"><div><b>Заказ в WhatsApp</b><span>Наведите камеру телефона на код</span></div></div>
+          <div class="qr"><img src="img/qr-instagram.svg" alt="QR-код Instagram cosmedica.kg" width="104" height="104"><div><b>Наш Instagram</b><span>@cosmedica.kg</span></div></div>
         </div>
       </div>
     </div>
@@ -576,7 +596,7 @@ footer{padding:40px 0 110px;color:var(--muted);font-size:14.5px}
 <footer>
   <div class="wrap foot">
     <span>© <span id="y">2026</span> Чистовье Кыргызстан — официальный эксклюзивный дистрибьютор. Бишкек, Кыргызстан.</span>
-    <span>Заказ: <a href="tel:+996557201719">+996 557 20 17 19</a> · <a href="https://www.instagram.com/INSTAGRAM_NICK/" target="_blank" rel="noopener">Instagram</a></span>
+    <span>Заказ: <a href="tel:+996557201719">+996 557 20 17 19</a> · <a href="https://www.instagram.com/cosmedica.kg/" target="_blank" rel="noopener">Instagram</a></span>
   </div>
 </footer>
 
